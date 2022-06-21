@@ -7,6 +7,8 @@
     <title>All The HTML Tags</title>
 </head>
 <body>
+      <!--comment line-->
+
     <!-- heading tags-->
     <h1>kesav</h1>
     <h2>kesav</h2>
@@ -543,25 +545,167 @@
                 <textarea name="comments" id="" cols="30" rows="10"> my opinoin about this page is </textarea>
             </form>
                           <br><br>
-            <!--radio inputs   here we used checked to select deafault selaction any input if didnt mention the checklist no one selected radio input-->
+            <!--radio inputs   here we used checked to select default selection any input 
+                if didnt mention the checklist no one selected radio input-->
 
             <form action="">
                 <label for="">gender</label>
-                <input type="radio" name="gender" id="" value="male" checked="checked">male 
-                <input type="radio" name="gender" id="" value="female">female
+                <input type="radio" name="gender" id="male" value="male" checked="checked"> <label for="male">male </label> 
+                <input type="radio" name="gender" id="female" value="female"> <label for="female">female</label> 
                 <input type="submit" value="submit">
             </form>
 
+            <!--check box type input ,,here we using [] bcz to store all the selected value to store in server if we code without [] these 
+                we can get only last selected checkbox only in server-->
 
+            <form>
+                <label>my hobbies are</label>
+                <input type="checkbox" name="hobbies[]" value="cricket" id="7">     <label for="7">cricket</label> 
+                <input type="checkbox" name="hobbies[]" value="music" id="8">       <label for="8">music</label>   
+                <input type="checkbox" name="hobbies[]" value="script writing" id="3">  <label for="3">script writing</label>      
+                <input type="checkbox" name="hobbies[]" value="photography" id="4">      <label for="4">photography</label>   
+                <input type="checkbox" name="hobbies[]" value="web developping" id="5">    <label for="5">web developping</label>        
+            </form>
 
+            <!--select or dropdown tag  ,, if want to select default date give (selected attribute) -->
 
+            <select name="dob" id="dob">
+                <option value="">select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>  <br><br>
+            <!--if we want to see 4 options default use size atribue. 
+                if we want to select muliple items checkbox select with control+options-->
 
+            <select name="" id="" size="4" multiple>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+            </select>
 
+            <!--file upload tag file vanthu binary data so apdiye send pana file name thaa text ah server ku pogum 
+                file eh poganum na encytype="multipart/formdata" nu tharanum -->
 
+            <form action="" enctype="multipart/form-data" >
+            <label for="10">upolad your file</label>
+            <input type="file" name="resume" id="10"> 
+            </form>
 
+            <!--field set and legend tag used to group the set of fields-->
 
+            <form action="">
+
+             <fieldset>
+                <legend>personal details</legend>  
+
+                <label for="">name</label>
+                <input type="text" name="" id="">
+
+                <label for="">gender</label>
+                <input type="radio" name="" id=""> <label for="">male</label>
+                <input type="radio" name="" id=""> <label for="">female</label>
+
+                <label for="">password</label>
+                <input type="password" name="" id=""> 
+            </fieldset>
+
+            <fieldset>
+                 <legend>educational details</legend> 
+
+                <label for="">sslc marks</label>
+                <input type="number" name="" id="">
+
+                <label for="">hsc mark</label>
+                <input type="number" name="" id="">
+
+                <label for="">ug grade</label>
+                <input type="number" name="" id="">
+            </fieldset>
             
+            <fieldset>
+                   <legend>contact details</legend>   
 
+                <label for="">email id</label>
+                <input type="email" name="" id="" required > <!--required attribute is used to must enter-->
+
+                <label for="">mob no</label>
+                <input type="tel" name="" id="">
+            </fieldset>
+            </form>
+
+            <label for="">date</label>
+            <input type="date" name="" id="">
+             <label for="">month</label>
+             <input type="month" name="" id="">
+             <label for="">year</label>
+             <input type="week">
+
+            <!--range field  step field is used for icreasing 10,20,30etc-->
+
+            <label for="price">price range</label>
+            <input type="range" name="price" id="price" min="0" max="1000" step="10">
+       
+            
+            <!-- div tag isused to group block elemnts and span tag is used to group inline elements-->
+            <div>
+            <p>hai</p>
+            <p>helo</p>
+            </div>
+
+            <p>hai hello <span>im kesavan and im full stack developer</span> call me for ur project</p>
+
+            <!--iframe tag is for to embed another web page like youtube, google map-->
+
+            <iframe src="yotube link" frameborder="0" width="" height="" allow="accelerometer; gyroscope; autoplay;" allowfullscreen>
+            </iframe> <br>
+
+            <!--html entities-->
+
+            &lt; <br>
+            &gt; <br>
+            h&nbsp;i <br>
+            &rthree; <br>
+            you &amp; me
+
+            <!--audio tag...   betwn the audio tag  use to tell message if audio not supported-->
+
+            <audio src="bharathringtone2-28054.mp3" controls>this browser doesnt support audio</audio>
+            
+            <!--another way its used to give different audio formats.if browser doesnt support wav format it taked mp3 format and play-->
+            <audio controls>
+                <source src="song.wav" type="audio/wav">
+                <source src="bharathringtone2-28054.mp3" type="audio/mp3">
+                <source src="song.m4a" type="audio/m4a">
+            </audio>
+
+            <!--video tag   same to audio tag-->
+
+            <video src="" controls width="640px" height="360px">this vdo not supported</video>
+
+            <video controls height="" width="">
+                <source src="" type="video/mp4">
+                <source src="" type="video/mpec4">
+                <source src="" type="video/avi">
+            </video>
+
+            <!---->
+
+
+     
+
+
+        
 
 </body>
 </html>
